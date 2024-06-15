@@ -1,0 +1,159 @@
+.about {
+    color: var(--black-100);
+
+    &_heading {
+        font-size: 12rem;
+        font-weight: bold;
+        color: #e6e6e6;
+        margin-left: 2rem;
+        margin-bottom: 4.3rem;
+        line-height: 14.5rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        &_heading {
+            font-size: 6rem;
+            line-height: 6.4rem;
+        }
+
+    }
+}
+
+.top {
+    position: relative;
+    padding-top: 15.6rem;
+    padding-bottom: 33rem;
+
+    .wrapper {
+        grid-area: 1 / 2 / span 6 / span 6;
+        max-width: 55.8rem;
+    }
+
+    .logo_type {
+        position: absolute;
+        top: -20%;
+        right: 0;
+        width: 46.5rem;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.text {
+    font-size: 2.4rem;
+    line-height: 3.5rem;
+    margin-bottom: 3rem;
+}
+
+.subtext {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+}
+
+.bottom {
+    position: relative;
+    width: 100%;
+    background-color: #F6F6F6;
+    padding-top: 10rem;
+    padding-bottom: 17.7rem;
+
+    .world {
+        position: absolute;
+        left: 4rem;
+        top: -32%;
+        width: 55.8rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .wrapper {
+        grid-area: 1 / 7 / span 6 / span 6;
+
+        .text {
+            max-width: 46rem;
+        }
+
+        ul {
+            max-width: 55.8rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .about {
+        &_heading {
+            max-width: 85rem;
+        }
+    }
+
+    .top {
+        .wrapper {
+            grid-area: 1 / 1 / span 12 / span 12;
+        }
+
+        .logo_type {
+            top: -13%;
+            width: 30rem;
+        }
+    }
+
+    .bottom {
+
+        .wrapper {
+            grid-area: 1 / 1 / span 12 / span 12;
+        }
+
+        .world {
+            width: 40rem;
+            top: -20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .about {
+        &_heading {
+            max-width: 40rem;
+        }
+    }
+
+    .text {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .top {
+        padding-bottom: 17.2rem;
+        padding-top: 12rem;
+
+        .wrapper {
+            grid-area: 1 / 1 / 2 / 4;
+        }
+
+        .logo_type {
+            width: 15rem;
+        }
+    }
+
+    .bottom {
+        padding-top: 28.7rem;
+        padding-bottom: 8rem;
+
+        .wrapper {
+            grid-area: 1 / 1 / 2 / 4;
+        }
+
+        .world {
+            width: 33.5rem;
+            top: 10%;
+        }
+    }
+}

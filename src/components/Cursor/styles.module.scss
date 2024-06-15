@@ -1,0 +1,17 @@
+.cursor {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    border-radius: 80px;
+    transition: 0.3s cubic-bezier(.44,.15,0,1.54) width, 0.3s cubic-bezier(.44,.15,0,1.54) height, 0.3s opacity, 0.3s background;
+    user-select: none;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-clip: padding-box;
+    z-index: 990;
+  }

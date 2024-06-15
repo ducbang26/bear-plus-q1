@@ -1,0 +1,150 @@
+@import '../../styles/mixin.scss';
+
+.hero {
+    background-color: var(--black-100);
+    padding-top: 11rem;
+    padding-bottom: 14.3rem;
+    overflow: hidden;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            margin-bottom: 3.2rem;
+        }
+
+        .hero_title {
+            text-align: center;
+            max-width: 84.3rem;
+            font-size: 4.2rem;
+            line-height: 5.4rem;
+            font-weight: 400;
+            margin-bottom: 12rem;
+        }
+    }
+}
+
+.home_cols_wrap {
+    width: 100%;
+    margin-top: 10rem;
+    z-index: 3;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-rows: auto;
+    grid-template-columns: minmax(1px, 1fr);
+    grid-auto-columns: 1fr;
+    display: grid;
+    position: relative;
+
+    div {
+        grid-area: 1 / 1 / 2 / 2;
+        max-width: 100%;
+    }
+}
+
+.img_full {
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    min-height: 3.13rem;
+}
+
+.img_full.col_1 {
+    z-index: 3;
+}
+
+.img_full.col_2 {
+    z-index: 2;
+}
+
+.img_full.col_3 {
+    z-index: 1;
+}
+
+.hero_content {
+    grid-area: 1 / 2 / span 10 / span 10;
+    flex-direction: row;
+    margin-top: -20rem;
+
+    @include flex-center;
+
+    img {
+        margin-right: 8.4rem;
+    }
+
+    .text {
+        position: relative;
+        max-width: 48.3rem;
+        font-size: 2.4rem;
+        line-height: 3.5rem;
+        padding-top: 7rem;
+        padding-left: 4.4rem;
+        margin-bottom: 0;
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 7.4rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hero_content {
+        grid-area: 1 / 1 / span 12 / span 12;
+        margin-top: -10rem;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .hero_content {
+        flex-direction: column-reverse;
+
+        img {
+            width: 100%;
+            margin-right: 0;
+        }
+
+        .text {
+            margin-bottom: 6rem;
+            max-width: fit-content;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hero_content {
+        grid-area: 1 / 1 / 2 / 4;
+
+        .text {
+            font-size: 2rem;
+            line-height: 3rem;
+            padding-top: 5.6rem;
+            padding-left: 0;
+
+            svg {
+                width: 4.8rem;
+            }
+        }
+    }
+
+    .hero {
+        .wrapper {
+            .hero_title {
+                font-size: 2.4rem;
+                line-height: 3.2rem;
+                max-width: 33.5rem;
+                margin-bottom: 8rem;
+            }
+        }
+    }
+
+    .home_cols_wrap {
+        margin-top: 8.6rem;
+        width: 250%;
+        margin-left: -75%;
+    }
+}

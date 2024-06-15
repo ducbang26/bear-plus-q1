@@ -1,0 +1,30 @@
+@import '../../styles/mixin.scss';
+
+.arrow_button {
+    width: 5.8rem;
+    height: 5.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(5, 48, 173, .6);
+    @include flex-center;
+    box-shadow: 0 0 0 0 rgb(4, 51, 192);
+    animation: pulse 2s ease infinite;
+
+    svg {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(5, 48, 173, 1);
+    }
+
+    50% {
+        box-shadow: 0 0 0 0 rgba(5, 47, 173, 0.5);
+    }
+
+    100% {
+        box-shadow: 0 0 0 3.6rem rgba(5, 47, 173, 0);
+    }
+}
