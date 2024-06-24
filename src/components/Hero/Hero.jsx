@@ -45,7 +45,7 @@ const Hero = () => {
             className={`${s.img_full} ${s.col_2}`}
           />
         </Parallax>
-        <Parallax offset={-0.1}>
+        <Parallax offset={-0.2}>
           <img
             src="/home_col_1.png"
             sizes="100vw"
@@ -54,23 +54,27 @@ const Hero = () => {
           />
         </Parallax>
       </div>
-      <Container className="grid">
-        <Fade
-          delayTrigger={0.4}
-          delayEnter={0.4}
-          direction="bottom"
-          from="25px"
-        >
-          <div className={s.hero_content} id="bottomHome">
-            <img src="/hero_content.png" alt="" />
-            <p className={s.text}>
-              <Blockquote />
-              At Crossian, we strive to cut the learning curve and barriers for
-              our core customer groups by simplifying their operations or buying
-              experience
-            </p>
-          </div>
-        </Fade>
+      <Container>
+        <div className="grid">
+          <Fade
+            delayTrigger={0.4}
+            delayEnter={0.4}
+            direction="bottom"
+            from="25px"
+          >
+            <div className={s.hero_content} id="bottomHome">
+              <img src="/hero_content.png" alt="" />
+              <Parallax offset={-0.1}>
+                <p className={s.text}>
+                  <Blockquote />
+                  At Crossian, we strive to cut the learning curve and barriers
+                  for our core customer groups by simplifying their operations
+                  or buying experience
+                </p>
+              </Parallax>
+            </div>
+          </Fade>
+        </div>
       </Container>
     </section>
   );

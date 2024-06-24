@@ -9,7 +9,7 @@
   --blue-90: #052faddb;
 
   color-scheme: light dark;
-  color: var(--white-100);              
+  color: var(--white-100);
   background-color: var(--white-100);
 
   font-synthesis: none;
@@ -36,6 +36,21 @@ ul {
 }
 
 .grid {
+  --container-padding: 6.4rem;
+  --grid-column: 12;
   column-gap: 3rem;
   display: grid;
+  grid-template-columns: repeat(var(--grid-column), minmax(0, 1fr));
+  padding: 0 var(--container-padding);
+}
+
+@media screen and (max-width: 767px) {
+  .grid {
+    --grid-column: 2;
+    --container-padding: 2rem;
+  }
+}
+
+.relative {
+  position: relative;
 }

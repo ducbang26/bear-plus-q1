@@ -5,6 +5,7 @@ import React, { useRef } from "react";
 
 import s from "./styles.module.scss";
 import { useAnimationStore } from "../../store/animation";
+import { Ring } from "../Ring/Ring";
 
 export default function PageLoader({ isLoaded, onCompleted }) {
   const progress = signal(0);
@@ -24,7 +25,7 @@ export default function PageLoader({ isLoaded, onCompleted }) {
 
       const progressAnimation = tl.to(progress, {
         value: 100,
-        duration: 1,
+        duration: 3,
         ease: "linear",
         onUpdate: () => {
           const newProgress = Math.round(progress.value);
@@ -57,6 +58,15 @@ export default function PageLoader({ isLoaded, onCompleted }) {
 
   return (
     <div className={s.pageLoader} ref={refContent}>
+      <div className={s.outer_ring}>
+        <Ring width={420} delay={0.5}/>
+      </div>
+      <div className={s.outer_ring}>
+        <Ring width={300} delay={1}/>
+      </div>
+      <div className={s.outer_ring}>
+        <Ring width={200} delay={1.5}/>
+      </div>
       <div className={s.pageLoader_inner}>
         <div className={s.wrapper_img}>
           <img src="/logo-type-loader.png" alt="logo-type-loader" />

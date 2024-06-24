@@ -1,13 +1,14 @@
 .cursor {
     position: fixed;
-    width: 15px;
-    height: 15px;
+    width: 30px;
+    height: 30px;
     border-radius: 80px;
     transition: 0.3s cubic-bezier(.44,.15,0,1.54) width, 0.3s cubic-bezier(.44,.15,0,1.54) height, 0.3s opacity, 0.3s background;
     user-select: none;
     pointer-events: none;
     mix-blend-mode: difference;
-    background: #fff;
+    background: transparent;
+    border: 2px solid var(--white-100);
     display: flex;
     align-items: center;
     justify-content: center;

@@ -27,6 +27,14 @@
       line-height: 2.6rem;
       text-align: center;
     }
+
+  }
+
+  .outer_ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
 }

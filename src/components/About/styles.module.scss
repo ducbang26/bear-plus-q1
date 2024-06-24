@@ -26,6 +26,7 @@
 
     .wrapper {
         grid-area: 1 / 2 / span 6 / span 6;
+        position: relative;
         max-width: 55.8rem;
     }
 
@@ -59,17 +60,6 @@
     padding-top: 10rem;
     padding-bottom: 17.7rem;
 
-    .world {
-        position: absolute;
-        left: 4rem;
-        top: -32%;
-        width: 55.8rem;
-
-        img {
-            width: 100%;
-        }
-    }
-
     .wrapper {
         grid-area: 1 / 7 / span 6 / span 6;
 
@@ -80,6 +70,17 @@
         ul {
             max-width: 55.8rem;
         }
+    }
+}
+
+.world {
+    position: absolute;
+    left: -4%;
+    top: -80%;
+    width: 55.8rem;
+
+    img {
+        width: 100%;
     }
 }
 
@@ -108,12 +109,12 @@
             grid-area: 1 / 1 / span 12 / span 12;
         }
 
-        .world {
-            width: 40rem;
-            top: -20%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    }
+
+    .world {
+        width: 40rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
@@ -150,10 +151,10 @@
         .wrapper {
             grid-area: 1 / 1 / 2 / 4;
         }
+    }
 
-        .world {
-            width: 33.5rem;
-            top: 10%;
-        }
+    .world {
+        width: 33.5rem;
+        top: -80%;
     }
 }
