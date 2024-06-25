@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import s from "./styles.module.scss";
 import { Container } from "../container/Container";
 import { ArrowButton } from "../ArrowButton/ArrowButton";
@@ -7,7 +7,7 @@ import ParagraphLineMask from "../../interactive/Mask";
 import Fade from "../../interactive/Fade";
 import Parallax from "../../interactive/Patallax";
 
-const Hero = () => {
+const Hero = forwardRef(function index(props, ref) {
   return (
     <section className={s.hero} id="home">
       <Container>
@@ -25,7 +25,9 @@ const Hero = () => {
               Leading and Leveling the playing field for cross-border Ecommerce
             </h1>
           </ParagraphLineMask>
-          <ArrowButton />
+          <div ref={ref}>
+            <ArrowButton />
+          </div>
         </div>
       </Container>
       <div className={s.home_cols_wrap}>
@@ -78,6 +80,6 @@ const Hero = () => {
       </Container>
     </section>
   );
-};
+});
 
 export default Hero;

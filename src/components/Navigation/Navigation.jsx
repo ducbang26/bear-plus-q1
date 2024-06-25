@@ -7,6 +7,7 @@ import { Culture } from "../../assets/culture";
 import { Careers } from "../../assets/careers";
 import { Email } from "../../assets/email";
 import { useLenis } from "lenis/react";
+import ScrollSpy from "react-scrollspy-navigation";
 
 const Navigation = () => {
   const lenis = useLenis();
@@ -28,74 +29,76 @@ const Navigation = () => {
   }, [])
 
   return (
-    <nav className={s.nav} style={{ opacity : `${show}`}}>
-      <ul>
-        <li>
-          <a
-            href="#home"
-            className={`${s.tooltip}`}
-            onClick={() => {
-              lenis.scrollTo("#home", { lerp: 0.1 });
-            }}
-          >
-            <House />
-            <span className={`${s.tooltip_text} ${s.tooltip_right}`}>Home</span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="#about"
-            className={`${s.tooltip}`}
-            onClick={() => {
-              lenis.scrollTo("#about", { lerp: 0.1 });
-            }}
-          >
-            <About />
-            <span className={`${s.tooltip_text} ${s.tooltip_right}`}>
-              About
-            </span>
-          </a>
-        </li>
-        <li>
-          <a
-            href="#products"
-            className={`${s.tooltip}`}
-            onClick={() => {
-              lenis.scrollTo("#products", { lerp: 0.1 });
-            }}
-          >
-            <Port />
-            <span className={`${s.tooltip_text} ${s.tooltip_right}`}>
-              Products
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="" className={`${s.tooltip}`}>
-            <Culture />
-            <span className={`${s.tooltip_text} ${s.tooltip_right}`}>
-              Culture
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="" className={`${s.tooltip}`}>
-            <Careers />
-            <span className={`${s.tooltip_text} ${s.tooltip_right}`}>
-              Careers
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="" className={`${s.tooltip}`}>
-            <Email />
-            <span className={`${s.tooltip_text} ${s.tooltip_right}`}>
-              Email
-            </span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <ScrollSpy activeClass="nav-active" offsetTop={80}>
+      <nav className={s.nav} style={{ opacity : `${show}`}}>
+        <ul>
+          <li>
+            <a
+              href="#home"
+              className={`${s.tooltip}`}
+              onClick={() => {
+                lenis.scrollTo("#home", { lerp: 0.1 });
+              }}
+            >
+              <House />
+              <span className={`${s.tooltip_text} ${s.tooltip_right}`}>Home</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#about"
+              className={`${s.tooltip}`}
+              onClick={() => {
+                lenis.scrollTo("#about", { lerp: 0.1 });
+              }}
+            >
+              <About />
+              <span className={`${s.tooltip_text} ${s.tooltip_right}`}>
+                About
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#products"
+              className={`${s.tooltip}`}
+              onClick={() => {
+                lenis.scrollTo("#products", { lerp: 0.1 });
+              }}
+            >
+              <Port />
+              <span className={`${s.tooltip_text} ${s.tooltip_right}`}>
+                Products
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="" className={`${s.tooltip}`}>
+              <Culture />
+              <span className={`${s.tooltip_text} ${s.tooltip_right}`}>
+                Culture
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="" className={`${s.tooltip}`}>
+              <Careers />
+              <span className={`${s.tooltip_text} ${s.tooltip_right}`}>
+                Careers
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="" className={`${s.tooltip}`}>
+              <Email />
+              <span className={`${s.tooltip_text} ${s.tooltip_right}`}>
+                Email
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </ScrollSpy>
   );
 };
 
